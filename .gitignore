@@ -10,3 +10,6 @@ build/
 node_modules/
 npm-debug.*
 Thumbs.db
+material/
+source/*.css
+source/*.map
