@@ -1,0 +1,35 @@
+@import "fonts.scss"; // Шрифты
+@import "variables.scss"; // Переменные
+@import "mixins.scss"; // Примеси
+@import "visually-hidden.scss"; // Доступное скрытие элементов
+@import "global.scss"; // Глобальные стили
+
+// // Блоки
+@import "blocks/button.scss";
+@import "blocks/tour.scss";
+@import "blocks/modal.scss";
+
+// // Header
+@import "blocks/page-header.scss";
+@import "blocks/nav.scss";
+// @import "blocks/.scss";
+
+// main
+@import "blocks/banner.scss";
+@import "blocks/page-main.scss";
+@import "blocks/catalog.scss";
+@import "blocks/places.scss";
+@import "blocks/tour-card.scss";
+@import "blocks/tour-list.scss";
+@import "blocks/description.scss";
+@import "blocks/feedback.scss";
+@import "blocks/price.scss";
+@import "blocks/callback.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+
+// // Footer
+@import "blocks/page-footer.scss";
+// @import "blocks/.scss";

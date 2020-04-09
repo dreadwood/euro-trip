@@ -1,0 +1,39 @@
+.tour-list {
+  @include reset-list;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 902px; // может ширину по содержимому
+
+  font-family: $font-deafult;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($gray--light, 0.7);
+  letter-spacing:  -0.415px;
+
+  border-bottom: 1px solid transparentize($gray--light, 0.7);
+}
+
+.tour-list__item {
+  margin-right: 100px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.tour-list__link {
+  display: block;
+  padding: 15px 0;
+
+  color: transparentize($gray--light, 0.7);
+
+  &:hover,
+  &:focus {
+    color: $main;
+  }
+}

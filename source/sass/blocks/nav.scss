@@ -1,0 +1,36 @@
+.nav {
+  font-family: $font-deafult;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: left;
+  color: $gray--dark;
+}
+
+.nav__list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+}
+
+.nav__item {
+  margin-left: 40px;
+
+  color: $gray--dark;
+
+  &:hover,
+  &:focus {
+    color: $main;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.nav__toggle {
+  display: none;
+}

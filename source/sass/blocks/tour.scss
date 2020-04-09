@@ -1,0 +1,90 @@
+.tour {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 350px;
+  height: 430px;
+
+  font-family: $font-deafult;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: $white;
+
+  background-color: $gray--light;
+  background-repeat: no-repeat;
+
+  &--greece {
+    background-image: url("img/greece-link.jpg");
+  }
+
+  &--albania {
+    background-image: url("img/albania-link.jpg");
+  }
+
+  &--macedonia {
+    background-image: url("img/macedonia-link.jpg");
+  }
+
+  &--montenegro {
+    background-image: url("img/montenegro-link.jpg");
+  }
+
+  &--croatia {
+    background-image: url("img/croatia-link.jpg");
+  }
+
+  &:hover .tour__focus,
+  &:focus .tour__focus {
+    display: flex;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.tour__focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: transparentize($gray--light, 0.3);
+}
+
+.tour__message {
+  display: block;
+  width: 266px;
+  padding: 30px 25px;
+
+  text-transform: uppercase;
+
+  border: 1px solid $white;
+}
+
+.tour__name {
+  position: relative;
+  z-index: 1;
+
+  width: 215px;
+  padding: 17px 15px 16px 15px;
+
+  font-size: 24px;
+  line-height: 29px;
+  font-style: normal;
+  color: $gray--light;
+  letter-spacing: -0.415px;
+
+  background-color: $white;
+}

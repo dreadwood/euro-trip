@@ -1,0 +1,51 @@
+.banner {
+  min-height: 860px;
+
+  font-family: $font-deafult;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: $white;
+  letter-spacing: -0.466667px;
+
+  background-color: $gray--light;
+  background-image: url("img/bg-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner__wrapper {
+  @include wrapper;
+
+  padding: 185px 80px 30px 700px;
+}
+
+.banner__title {
+  margin: 0;
+  margin-bottom: 28px;
+
+  font-size: 55px;
+  line-height: 80px;
+  font-weight: 600;
+  letter-spacing: -1.10667px;
+}
+
+.banner__text {
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.bunner__button {
+  width: 340px;
+  padding-right: 74px;
+
+  text-align: left;
+
+  background-image: url("img/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 14px auto;
+  background-position: right 40px center;
+}

@@ -1,0 +1,68 @@
+.tour-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 596px;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 175%;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($gray--light, 0.3);
+  letter-spacing: -0.466667px;
+}
+
+.tour-card__wrapper {
+  width: 375px;
+  padding-bottom: 6px;
+}
+
+.tour-card__title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 48px;
+
+  font-size: 55px;
+  line-height: 90px;
+  font-weight: 600;
+  color: $gray--light;
+  letter-spacing: -1.245px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+
+    width: 175px;
+    height: 3px;
+
+    background-color: $main;
+  }
+}
+
+.tour-card__text {
+  margin: 0;
+  margin-bottom: 49px;
+}
+
+.tour-card__button {
+  width: 250px;
+  padding: 30px 30px;
+}
+
+.tour-card__feedback {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 700px;
+  align-self: stretch;
+
+  background-image: url("img/greece-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}

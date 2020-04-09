@@ -1,0 +1,68 @@
+.page-header {
+  @include wrapper;
+
+  display: flex;
+  align-items: center;
+  padding: 37px 0 31px 0;
+
+  font-family: $font-deafult;
+  font-size: 18px;
+  line-height: 32px;
+  font-style: normal;
+  text-align: left;
+  color: $gray--dark;
+}
+
+.page-header__logo {
+  display: flex;
+  align-items: center;
+  margin-top: -6px;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.7;
+  }
+
+  &[href]:active {
+    opacity: 0.5;
+  }
+}
+
+.page-header__nav {
+  margin-top: -3px;
+  margin-left: auto;
+}
+
+.page-header__tel {
+  position: relative;
+
+  margin-right: 14px;
+  margin-left: 94px;
+
+  color: $main;
+  text-decoration: underline;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 1px;
+    left: -40px;
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+  }
+
+  &:hover,
+  &focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

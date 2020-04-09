@@ -5,90 +5,120 @@
   <meta charset="utf-8">
   <title>Путешествие по Европе</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <a href="#">
-      <!-- add src -->
-      <img src="#" alt="Логотип компании «Way»">
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img src="img/logo.svg" width="auto" height="22" alt="Логотип компании «Way»">
     </a>
     <!-- change cursore -->
-    <button type="button">Меню</button>
-    <nav>
-      <ul>
-        <li><a href="">О путешествии</a></li>
-        <li><a href="">Цены</a></li>
+    <nav class="page-header__nav nav">
+      <ul class="nav__list">
+        <li><a class="nav__item" href="#places">О путешествии</a></li>
+        <li><a class="nav__item" href="#price">Цены</a></li>
       </ul>
-      <!-- можно ли в этот тег кнопку? -->
-      <button type="button">Закрыть</button>
+      <button class="nav__toggle" type="button">Открыть меню</button>
     </nav>
-    <a href="tel:+749978468446">+7 (499) -784-684-46</a>
+    <a class="page-header__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
   </header>
 
-  <main>
+  <main class="page-main">
     <h1 class="visually-hidden">Сайт туристической компании «Way»</h1>
     <section class="banner">
-      <h2>Путешествие по Европпе</h2>
-      <p>В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-      <!-- go to tour description -->
-      <a href="#">смотреть тур</a>
+      <div class="banner__wrapper">
+        <h2 class="banner__title">Путешествие по Европпе</h2>
+        <p class="banner__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+        <!-- go to tour description -->
+        <a class="bunner__button button" href="#">смотреть тур</a>
+      </div>
     </section>
 
     <section class="catalog">
-      <div>
-        <h2>Места посещения</h2>
-        <p>Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
-        <ul>
-          <li>
-            <a href="#greece">Греция</a>
-              <i>смотреть подробнее</i>
+      <div class="places" id="places">
+        <h2 class="places__title">Места посещения</h2>
+        <p class="places__text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
+        <ul class="places__list">
+          <li class="places__item">
+            <a class="tour tour--greece" href="#greece">
+              <div class="tour__focus">
+                <span class="tour__message">смотреть подробнее</span>
+              </div>
+              <i class="tour__name">Греция</i>
+            </a>
           </li>
-          <li>
-            <a href="#albania">Албания</a>
-            <i>смотреть подробнее</i>
+          <li class="places__item">
+            <a class="tour tour--albania" href="#albania">
+              <div class="tour__focus">
+                <span class="tour__message">смотреть подробнее</span>
+              </div>
+              <span class="tour__name">Албания</span>
+            </a>
           </li>
-          <li>
-            <a href="#macedonia">Македония</a>
-            <i>смотреть подробнее</i>
+          <li class="places__item">
+            <a class="tour tour--macedonia" href="#macedonia">
+              <div class="tour__focus">
+                <span class="tour__message">смотреть подробнее</span>
+              </div>
+              <i class="tour__name">Македония</i>
+            </a>
           </li>
-          <li>
-            <a href="#montenegro">Черногория</a>
-            <i>смотреть подробнее</i>
+          <li class="places__item">
+            <a class="tour tour--montenegro" href="#montenegro">
+              <div class="tour__focus">
+                <span class="tour__message">смотреть подробнее</span>
+              </div>
+              <i class="tour__name">Черногория</i>
+            </a>
           </li>
-          <li>
-            <a href="#croatia">Хорватия</a>
-            <i>смотреть подробнее</i>
+          <li class="places__item">
+            <a class="tour tour--croatia" href="#croatia">
+              <div class="tour__focus">
+                <span class="tour__message">смотреть подробнее</span>
+              </div>
+              <i class="tour__name">Хорватия</i>
+            </a>
           </li>
         </ul>
       </div>
 
-      <div>
+      <div class="description">
         <!-- возможно навигация -->
-        <ul>
-          <li><a href="#greece">Греция</a></li>
-          <li><a href="#albania">Албания</a></li>
-          <li><a href="#macedonia">Македония</a></li>
-          <li><a href="#montenegro">Черногория</a></li>
-          <li><a href="#croatia">Хорватия</a></li>
+        <ul class="description__list-link tour-list">
+          <li class="tour-list__item">
+            <a class="tour-list__link" href="#greece">Греция</a>
+          </li>
+          <li class="tour-list__item">
+            <a class="tour-list__link" href="#albania">Албания</a>
+          </li>
+          <li class="tour-list__item">
+            <a class="tour-list__link" href="#macedonia">Македония</a>
+          </li>
+          <li class="tour-list__item">
+            <a class="tour-list__link" href="#montenegro">Черногория</a>
+          </li>
+          <li class="tour-list__item">
+            <a class="tour-list__link" href="#croatia">Хорватия</a>
+          </li>
         </ul>
-        <div>
-          <article>
-            <div>
-              <h3>Греция</h3>
-              <p>На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
-              <a href="">купить тур сейчас</a>
+        <div class="description__list">
+          <article class="description__item tour-card">
+            <div class="tour-card__wrapper">
+              <h3 class="tour-card__title">Греция</h3>
+              <p class="tour-card__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
+              <a class="tour-card__button button" href="">купить тур сейчас</a>
             </div>
-            <div>
-              <div>
-                <blockquote>
-                  <strong>Отзывы</strong>
-                  <p>Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
-                  <img src="#" alt="Фотография Влады Голициной">
-                  <cite>Влада Голицина</cite>
+            <div class="tour-card__feedback">
+                <blockquote class="feedback">
+                  <strong class="feedback__title">Отзывы</strong>
+                    <p class="feedback__text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!</p>
+                    <div class="feedback__author-wrapper">
+                      <img class="feedback__author-img" src="img/avatar-vlada.jpg" width="auto" height="38" alt="Фотография Влады Голициной">
+                      <cite class="feedback__author" >Влада Голицина</cite>
+                    </div>
                 </blockquote>
-              </div>
             </div>
           </article>
           <!-- other tour -->
@@ -96,109 +126,115 @@
       </div>
     </section>
 
-    <section class="price">
-      <div>
-        <ul>
-          <li>
-            <b>Комплексный $1999</b>
-            <p>Ознакомьтесь с перечнем того, что входит в данный пакет</p>
-            <ul>
-              <li>Разработанный маршрут с гидом группы</li>
-              <li>Перелет, трансфер и проживание в отелях</li>
-              <li>Завтраки, ужины в отелях и ланчи на природе</li>
-              <li>Экскурсии по удивительно красивым местам Европы</li>
-              <li></li>
+    <section class="price" id="price">
+      <!-- <div class="price__variants"> -->
+        <ul class="price__list">
+          <li class="price__item price__item--top">
+            <strong class="price__item-title">
+              Комплексный
+              <span class="price__item-cost">$1999</span>
+            </strong>
+            <p class="price__item-text">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
+            <ul class="price__item-list">
+              <li class="price__item-advantage">Разработанный маршрут с гидом группы</li>
+              <li class="price__item-advantage">Перелет, трансфер и проживание в отелях</li>
+              <li class="price__item-advantage">Завтраки, ужины в отелях и ланчи на природе</li>
+              <li class="price__item-advantage">Экскурсии по удивительно красивым местам Европы</li>
             </ul>
-            <a href="#">купить тур сейчас</a>
+            <a class="price__item-button button" href="#">купить тур сейчас</a>
           </li>
-          <li>
-            <b>Экономный $1399</b>
-            <p>Ознакомьтесь с перечнем того, что входит в данный пакет</p>
-            <ul>
-              <li>Разработанный маршрут с гидом группы</li>
-              <li>Перелет и трансфер</li>
-              <li>Проживание в хостелах при отелях</li>
-              <li>Только завтраки в отелях</li>
-              <li>Экскурсии по удивительно красивым местам Европы</li>
+          <li class="price__item">
+            <strong class="price__item-title">
+              Экономный
+              <span class="price__item-cost">$1399</span>
+            </strong>
+            <p class="price__item-text">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
+            <ul class="price__item-list">
+              <li class="price__item-advantage">Разработанный маршрут с гидом группы</li>
+              <li class="price__item-advantage">Перелет и трансфер</li>
+              <li class="price__item-advantage">Проживание в хостелах при отелях</li>
+              <li class="price__item-advantage">Только завтраки в отелях</li>
+              <li class="price__item-advantage">Экскурсии по удивительно красивым местам Европы</li>
             </ul>
-            <a href="#">купить тур сейчас</a>
+            <a class="price__item-button button" href="#">купить тур сейчас</a>
           </li>
         </ul>
-      </div>
-      <div>
-        <h2>Цены</h2>
-        <p>Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
-        <b>Свяжитесь с нами</b>
-        <a href="tel:+749978468446">+7 (499) -784-684-46</a>
+      <!-- </div> -->
+      <div class="price__wrapper">
+        <h2 class="price__title">Цены</h2>
+        <p class="price__text">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
+        <p class="price__tel">
+          <span class="price__tel-message">Свяжитесь с нами</span>
+          <a class="price__tel-number" href="tel:+749978468446">+7 (499) -784-684-46</a>
+        </p>
       </div>
     </section>
 
-    <section class="contact">
-      <div>
-        <h2>Обратная связь</h2>
-        <i>У Вас остались вопросы?</i>
-        <p>Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-        <form action="https://echo.htmlacademy.ru" method="POST">
-          <input type="tel" name="tel" placeholder="+7 Введите 10 цифр номера">
-          <input type="email" name="email" placeholder="E-mail">
-          <button type="submit">Отправить</button>
+    <section class="callback">
+      <div class="callback__container">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <b class="callback__title">У Вас остались вопросы?</b>
+        <p class="callback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+        <form class="callback__form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="callback__form-wrapper">
+            <input class="callback__input callback__input-tel" type="tel" name="tel" autocomplete="tel" autocorrect="off" minlength="10" required placeholder="Введите 10 цифр номера">
+            <input class="callback__input" type="email" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" placeholder="E-mail">
+          </div>
+          <button class="callback__button button" type="submit">Отправить</button>
         </form>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div>
-      <!-- maybe ~h2 -->
-      <p>Следующие путешествия</p>
-      <!-- maybe nav -->
-      <ul>
-        <li><a href="#">Марсель</a></li>
-        <li><a href="#">Ним</a></li>
-        <li><a href="#">Монпелье</a></li>
-        <li><a href="#">Барселона</a></li>
-        <li><a href="#">Пальма</a></li>
+  <footer class="page-footer">
+    <div class="page-footer__other-tour">
+      <p class="page-footer__title">Следующие путешествия</p>
+      <ul class="page-footer__list">
+        <li><a class="page-footer__list-item" href="#">Марсель</a></li>
+        <li><a class="page-footer__list-item" href="#">Ним</a></li>
+        <li><a class="page-footer__list-item" href="#">Монпелье</a></li>
+        <li><a class="page-footer__list-item" href="#">Барселона</a></li>
+        <li><a class="page-footer__list-item" href="#">Пальма</a></li>
       </ul>
-      <ul>
-        <li><a href="#">Сардиния</a></li>
-        <li><a href="#">Палермо</a></li>
-        <li><a href="#">Катания</a></li>
-        <li><a href="#">Неаполь</a></li>
-        <li><a href="#">Рим</a></li>
+      <ul class="page-footer__list">
+        <li><a class="page-footer__list-item" href="#">Сардиния</a></li>
+        <li><a class="page-footer__list-item" href="#">Палермо</a></li>
+        <li><a class="page-footer__list-item" href="#">Катания</a></li>
+        <li><a class="page-footer__list-item" href="#">Неаполь</a></li>
+        <li><a class="page-footer__list-item" href="#">Рим</a></li>
       </ul>
-      <ul>
-        <li><a href="#">Корс</a></li>
-        <li><a href="#">Ницца</a></li>
-        <li><a href="#">Монако</a></li>
-        <li><a href="#">Динь-ле-Бен</a></li>
-        <li><a href="#">Гренобль</a></li>
+      <ul class="page-footer__list">
+        <li><a class="page-footer__list-item" href="#">Корс</a></li>
+        <li><a class="page-footer__list-item" href="#">Ницца</a></li>
+        <li><a class="page-footer__list-item" href="#">Монако</a></li>
+        <li><a class="page-footer__list-item" href="#">Динь-ле-Бен</a></li>
+        <li><a class="page-footer__list-item" href="#">Гренобль</a></li>
       </ul>
     </div>
-    <div>
-      <!-- maybe ~h2 -->
-      <p>Наши контакты</p>
-      <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-      <a href="tel:+749978468446">+7 (499) -784-684-46</a>
+    <div class="page-footer__contact">
+      <p class="page-footer__title">Наши контакты</p>
+      <a class="page-footer__contact-item page-footer__contact-item--mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+      <a class="page-footer__contact-item page-footer__contact-item--tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
     </div>
-    <div>
-      <p>Корпоративные путешествия</p>
-      <p>Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
+    <div class="page-footer__block-message">
+      <p class="page-footer__title">Корпоративные путешествия</p>
+      <p class="page-footer__text">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию,&nbsp;помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
     </div>
   </footer>
 
-  <section>
-    <div>
-      <h2>Купить тур </h2>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <input type="tel" name="tel" placeholder="+7 Введите 10 цифр номера">
-        <input type="email" name="email" placeholder="E-mail">
-        <button type="submit">Отправить</button>
+  <section class="modal">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Купить тур </h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
+        <input class="modal__input modal__input--tel" type="tel" name="tel"  autocomplete="tel" autocorrect="off" minlength="10" required placeholder="Введите 10 цифр номера">
+        <input class="modal__input modal__input--email" type="email" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" placeholder="E-mail">
+        <button class="modal__button button" type="submit">Отправить</button>
       </form>
     </div>
-    <div>
-      <p>Форма успешно отправлена, спасибо! :)</p>
-    </div>
-    <button type="button">Закрыть</button>
+    <div class="modal__message">Форма успешно отправлена, спасибо! :)</div>
+    <button class="modal__close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
   </section>
 </body>
 
