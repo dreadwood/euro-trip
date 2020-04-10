@@ -1,10 +1,27 @@
 .modal {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
 
   display: none;
-  // display: flex;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: transparentize($black, 0.5);
+  cursor: pointer;
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal__card{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+
+  display: flex;
   justify-content: flex-end;
   width: 728px;
   min-height: 443px;
@@ -22,6 +39,10 @@
   background-repeat: no-repeat;
   background-size: auto 100%;
   transform: translate(-50%, -50%);
+
+  &--show {
+    display: flex;
+  }
 }
 
 .modal__wrapper {
@@ -64,6 +85,10 @@
     color: $gray--dark;
   }
 
+  &:invalid {
+    border: 1px solid $main;
+  }
+
   &--tel {
     padding: 15px 15px 15px 50px;
 
@@ -79,11 +104,10 @@
   padding: 18px 10px 17px 10px;
 }
 
-.modal__message {
+.modal__success {
   position: absolute;
 
   display: none;
-  // display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -91,6 +115,10 @@
   padding: 10px 120px;
 
   background-color: $modal-bg;
+
+  &--show {
+    display: flex;
+  }
 }
 
 .modal__close {
@@ -108,4 +136,5 @@
   background-repeat: no-repeat;
   background-position: 10px 10px;
   border: none;
+  cursor: pointer;
 }

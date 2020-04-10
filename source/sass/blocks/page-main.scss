@@ -1,3 +1,9 @@
 .page-main {
   padding: 0 0 170px 0;
 }
+
+@media (max-width: $tablet-width-only) {
+  .page-main {
+    padding-bottom: 81px;
+  }
+}

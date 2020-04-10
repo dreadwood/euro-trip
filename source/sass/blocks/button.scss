@@ -26,4 +26,13 @@
   }
 }
 
+@media (max-width: $tablet-width-only) {
+  .button {
+    padding: 19px 40px;
 
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+}

@@ -49,3 +49,35 @@
   background-size: 14px auto;
   background-position: right 40px center;
 }
+
+@media (max-width: $tablet-width-only) {
+  .banner {
+    min-height: 344px;
+    padding: 60px 185px 30px 185px;
+  }
+
+  .banner__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .banner__title {
+    margin-bottom: 15px;
+
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  .banner__text {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .bunner__button {
+    width: 250px;
+    margin: 0 auto;
+  }
+}

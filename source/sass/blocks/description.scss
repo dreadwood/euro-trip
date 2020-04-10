@@ -9,3 +9,12 @@
 .description__list {
 
 }
+
+@media (max-width: $tablet-width-only) {
+  .description__list-link {
+    margin-bottom: 32px;
+    margin-left: 37px;
+
+    overflow-x: scroll;
+  }
+}

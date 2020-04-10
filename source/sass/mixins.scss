@@ -9,14 +9,14 @@
   margin: 0 auto;
 
   @media (min-width: $mobile-width) {
-    width: $mobile-width - $mobile-indent * 2;
+    width: $mobile-width;
   }
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width - $tablet-indent * 2;
+    width: auto;
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width - $desktop-indent * 2;
+    width: $desktop-width;
   }
 }
