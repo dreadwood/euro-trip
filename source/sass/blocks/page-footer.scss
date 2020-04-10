@@ -167,3 +167,55 @@
     border-left: none;
   }
 }
+
+@media (max-width: $mobile-width-only) {
+  .page-footer {
+    padding: 0 12px 39px 12px;
+  }
+
+  .page-footer__other-tour {
+    justify-content: center;
+    width: auto;
+    margin-bottom: 0;
+    padding: 0 9px 0 0;
+
+    border: none;
+    border-bottom: 1px solid $gray;;
+  }
+
+  .page-footer__title {
+    text-align: center;
+  }
+
+  .page-footer__list {
+    width: 134px;
+    margin-right: 0;
+    margin-bottom: 10px;
+
+    text-align: center;
+  }
+
+  .page-footer__contact {
+    margin-left: 0;
+    padding: 29px 22px 0 20px;
+  }
+
+  .page-footer__contact-item {
+    &--mail {
+      margin-left: 30px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &--tel {
+      margin-bottom: 13px;
+      margin-left: 60px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  .page-footer__block-message {
+    padding: 28px 0 0 8px;
+  }
+}

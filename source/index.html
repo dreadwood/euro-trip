@@ -17,7 +17,7 @@
     <button class="page-header__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
-    <nav class="page-header__nav nav">
+    <nav class="page-header__nav nav nav--no-js">
       <ul class="nav__list">
         <li><a class="nav__item" href="#places">О путешествии</a></li>
         <li><a class="nav__item" href="#price">Цены</a></li>
@@ -50,7 +50,7 @@
             </a>
           </li>
           <li class="places__item">
-            <a class="tour tour--albania" href="#albania">
+            <a class="tour tour--albania" href="#description">
               <div class="tour__focus">
                 <span class="tour__message">смотреть подробнее</span>
               </div>
@@ -58,7 +58,7 @@
             </a>
           </li>
           <li class="places__item">
-            <a class="tour tour--macedonia" href="#macedonia">
+            <a class="tour tour--macedonia" href="#description">
               <div class="tour__focus">
                 <span class="tour__message">смотреть подробнее</span>
               </div>
@@ -66,7 +66,7 @@
             </a>
           </li>
           <li class="places__item">
-            <a class="tour tour--montenegro" href="#montenegro">
+            <a class="tour tour--montenegro" href="#description">
               <div class="tour__focus">
                 <span class="tour__message">смотреть подробнее</span>
               </div>
@@ -74,7 +74,7 @@
             </a>
           </li>
           <li class="places__item">
-            <a class="tour tour--croatia" href="#croatia">
+            <a class="tour tour--croatia" href="#description">
               <div class="tour__focus">
                 <span class="tour__message">смотреть подробнее</span>
               </div>
@@ -84,7 +84,7 @@
         </ul>
       </div>
 
-      <div class="description">
+      <div id="description" class="description">
         <div class="description__list-link">
           <ul id="tour-list" class="tour-list">
             <li class="tour-list__item">
@@ -116,7 +116,10 @@
                   <strong class="feedback__title">Отзывы</strong>
                     <p class="feedback__text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!</p>
                     <div class="feedback__author-wrapper">
-                      <img class="feedback__author-img" src="img/avatar-vlada.jpg" width="auto" height="38" alt="Фотография Влады Голициной">
+                      <picture>
+                        <source type="image/webp" srcset="img/avatar-vlada.webp 1x, img/avatar-vlada-2x.webp 2x">
+                        <img class="feedback__author-img" src="img/avatar-vlada.jpg" srcset="img/avatar-vlada-2x.jpg 2x" width="auto" height="38" alt="Фотография Влады Голициной">
+                      </picture>
                       <cite class="feedback__author" >Влада Голицина</cite>
                     </div>
                 </blockquote>
@@ -194,13 +197,11 @@
                 </blockquote>
             </div>
           </article>
-          <!-- other tour -->
         </div>
       </div>
     </section>
 
     <section class="price" id="price">
-      <!-- <div class="price__variants"> -->
         <ul class="price__list">
           <li class="price__item price__item--top">
             <strong class="price__item-title">
@@ -232,7 +233,6 @@
             <a class="price__item-button button button--buy-now" href="#">купить тур сейчас</a>
           </li>
         </ul>
-      <!-- </div> -->
       <div class="price__wrapper">
         <h2 class="price__title">Цены</h2>
         <p class="price__text">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>

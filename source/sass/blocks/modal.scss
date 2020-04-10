@@ -138,3 +138,30 @@
   border: none;
   cursor: pointer;
 }
+
+@media (max-width: $mobile-width-only) {
+  .modal__card {
+    width: 320px;
+    min-height: 568px;
+
+    background-image: none;
+  }
+
+  .modal__wrapper {
+    width: 100%;
+    padding: 100px 16px 20px 16px
+  }
+
+  .modal__form {
+    width: 100%;
+  }
+
+  .modal__input {
+    width: 100%;
+    margin-bottom: 21px;
+  }
+
+  .modal__button {
+    width: 100%;
+  }
+}

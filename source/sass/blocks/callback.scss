@@ -118,3 +118,44 @@
     padding: 20px 10px 18px 10px;
   }
 }
+
+@media (max-width: $mobile-width-only) {
+  .callback {
+    padding: 0;
+
+    background-image: none;
+  }
+
+  .callback__container {
+    width: auto;
+    padding: 51px 16px 50px 16px;
+
+    background-color: $modal-bg;
+    box-shadow: none
+  }
+
+  .callback__title {
+    margin-bottom: 20px;
+
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+
+  .callback__form-wrapper {
+    width: 288px;
+  }
+
+  .callback__text {
+    margin-bottom: 19px;
+  }
+
+  .callback__input {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .callback__button {
+    width: 288px;
+  }
+}

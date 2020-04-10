@@ -7,3 +7,9 @@
     padding-bottom: 81px;
   }
 }
+
+@media (max-width: $mobile-width-only) {
+  .page-main {
+    padding-bottom: 70px;
+  }
+}

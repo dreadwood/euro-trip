@@ -74,10 +74,43 @@
   .banner__text {
     margin-bottom: 10px;
     text-align: center;
+    color: $white;
   }
 
   .bunner__button {
     width: 250px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .banner {
+    padding: 82px 16px 30px 16px;
+
+    background-color: transparent;
+    background-size: auto 235px;
+    background-position: center 0;
+  }
+
+  .banner__wrapper {
+    width: auto;
+  }
+
+  .banner__title {
+    min-height: 72px;
+    margin-bottom: 101px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .banner__text {
+    margin-bottom: 20px;
+
+    color: $gray--light;
+  }
+
+  .bunner__button {
+    width: 288px;
   }
 }

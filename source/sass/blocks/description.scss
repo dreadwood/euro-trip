@@ -6,15 +6,18 @@
   margin-bottom: 79px;
 }
 
-.description__list {
-
-}
-
 @media (max-width: $tablet-width-only) {
   .description__list-link {
     margin-bottom: 32px;
     margin-left: 37px;
 
     overflow-x: scroll;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .description__list-link {
+    margin-bottom: 24px;
+    margin-left: 16px;
   }
 }

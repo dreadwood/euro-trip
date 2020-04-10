@@ -251,6 +251,7 @@
   .price__list {
     order: 2;
   }
+
   .price__wrapper {
     order: 1;
     width: auto;
@@ -366,3 +367,45 @@
   }
 }
 
+@media (max-width: $mobile-width-only) {
+  .price {
+    width: auto;
+    padding: 0;
+  }
+
+  .price__wrapper {
+    padding: 0 27px 41px 22px;
+  }
+
+  .price__title {
+    margin-bottom: 19px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .price__text {
+    margin-bottom: 19px;
+  }
+
+  .price__list {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 16px 20px 16px;
+  }
+
+  .price__item {
+    width: 288px;
+    min-height: 614px;
+    margin-bottom: 30px;
+    padding: 28px 0 0 0;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    .price__item-button {
+      margin: 19px -1px -1px -1px;
+    }
+  }
+}

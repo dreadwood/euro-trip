@@ -159,3 +159,29 @@
     background-size: 100% auto;
   }
 }
+
+@media (max-width: $mobile-width-only) {
+  .tour-card__wrapper {
+    margin-bottom: 40px;
+    padding: 0 16px 10px 16px;
+  }
+
+  .tour-card__title {
+    margin-bottom: 21px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .tour-card__text {
+    margin-bottom: 18px;
+  }
+
+  .tour-card__button {
+    width: auto;
+  }
+
+  .tour-card__feedback {
+    padding: 51px 26px 0 26px;
+  }
+}

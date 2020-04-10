@@ -123,3 +123,35 @@
     display: none;
   }
 }
+
+@media (max-width: $mobile-width-only) {
+  .page-header {
+    width: auto;
+    padding: 18px 50px 15px 16px;
+
+    &--no-js {
+      display: flex;
+      flex-direction: column;
+      padding: 18px 20px 15px 20px;
+    }
+
+    &--no-js .page-header__logo {
+      margin-bottom: 15px;
+    }
+
+    &--no-js .page-header__nav {
+      width: 100%;
+      margin: 0;
+    }
+
+    &--open .page-header__toggle {
+      background-position: 13px 14px;
+    }
+  }
+
+  .page-header__toggle {
+    width: 50px;
+
+    background-position: 10px 10px;
+  }
+}
