@@ -13,6 +13,7 @@ const toogleMenu = (evt) => {
 
 header.classList.remove('page-header--no-js');
 header.classList.add('page-header--close');
+nav.classList.remove('nav--no-js')
 nav.classList.add('nav--js');
 
 button.addEventListener('click', toogleMenu);
@@ -28,6 +29,7 @@ navButtons.forEach((button) => {
 
 const tourLinks = document.querySelectorAll('.tour-list__link');
 const tourCards = document.querySelectorAll('.tour-card');
+const tourIcons = document.querySelectorAll('.tour')
 
 tourCards.forEach((card) => {
   card.classList.add('tour-card--hidden');
@@ -35,21 +37,32 @@ tourCards.forEach((card) => {
 tourLinks[0].classList.add('tour-list__link--active');
 tourCards[0].classList.remove('tour-card--hidden');
 
+const changeCards = (index) => {
+  tourLinks.forEach((button) => {
+    button.classList.remove('tour-list__link--active');
+  });
+  tourCards.forEach((card) => {
+    card.classList.add('tour-card--hidden');
+  });
+
+  tourLinks[index].classList.add('tour-list__link--active');
+  tourCards[index].classList.remove('tour-card--hidden');
+};
 
 tourLinks.forEach((element, index) => {
   element.addEventListener('click', (evt) => {
     evt.preventDefault();
-    tourLinks.forEach((button) => {
-      button.classList.remove('tour-list__link--active');
-    });
-    tourCards.forEach((card) => {
-      card.classList.add('tour-card--hidden');
-    });
-
-    element.classList.add('tour-list__link--active');
-    tourCards[index].classList.remove('tour-card--hidden');
+    changeCards(index);
   });
 });
+
+tourIcons.forEach((element, index) => {
+  element.addEventListener('click', () => {
+    changeCards(index);
+  });
+});
+
+
 
 
 const callbackForm = document.querySelector('.callback__form')
