@@ -15,7 +15,7 @@
   }
 }
 
-.modal__card{
+.modal__card {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -35,10 +35,14 @@
   color: $modal-text;
 
   background-color: $modal-bg;
-  background-image: url("img/modal-bg.jpg");
+  background-image: url("../img/modal-bg.jpg");
   background-repeat: no-repeat;
   background-size: auto 100%;
   transform: translate(-50%, -50%);
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/modal-bg-2x.jpg");
+  }
 
   &--show {
     display: flex;
@@ -48,7 +52,7 @@
 .modal__wrapper {
   width: 390px;
   height: 100%;
-  padding: 72px 20px 20px 18px
+  padding: 72px 20px 20px 18px;
 }
 
 .modal__title {
@@ -92,7 +96,7 @@
   &--tel {
     padding: 15px 15px 15px 50px;
 
-    background-image: url("img/input-ph.svg");
+    background-image: url("../img/input-ph.svg");
     background-repeat: no-repeat;
     background-position: 14px 5px;
     background-size: auto 29px;
@@ -132,7 +136,7 @@
   height: 42px;
 
   background-color: transparent;
-  background-image: url("img/icon-close.svg");
+  background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   background-position: 10px 10px;
   border: none;
@@ -149,7 +153,7 @@
 
   .modal__wrapper {
     width: 100%;
-    padding: 100px 16px 20px 16px
+    padding: 100px 16px 20px 16px;
   }
 
   .modal__form {

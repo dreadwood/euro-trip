@@ -112,14 +112,14 @@
     top: -1px;
     left: -41px;
 
-    background-image: url("img/icon-mail.svg");
+    background-image: url("../img/icon-mail.svg");
   }
 
   &--tel::before {
     top: -4px;
     left: -41px;
 
-    background-image: url("img/icon-phone-gray.svg");
+    background-image: url("../img/icon-phone-gray.svg");
   }
 
   &:hover,
@@ -153,7 +153,7 @@
   }
 
   .page-footer__contact {
-    margin-right: 0px;
+    margin-right: 0;
     padding: 0 22px 0 20px;
   }
 
@@ -180,7 +180,7 @@
     padding: 0 9px 0 0;
 
     border: none;
-    border-bottom: 1px solid $gray;;
+    border-bottom: 1px solid $gray;
   }
 
   .page-footer__title {

@@ -38,7 +38,7 @@
     left: 0;
 
     width: 68px;
-    height: 0.73px;;
+    height: 0.73px;
 
     background-color: $main;
   }
@@ -55,6 +55,7 @@
 }
 
 .feedback__author-img {
+  display: block;
   width: 38px;
   height: 38px;
   margin-right: 16px;

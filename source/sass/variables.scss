@@ -1,6 +1,5 @@
 $font-deafult: "Montserrat", "Arial", sans-serif;
 
-// Ширины вьюпорта
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1170px;
@@ -11,22 +10,13 @@ $tablet-width-only: 1169px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-// Отступы
-// $mobile-indent: 16px;
-// $tablet-indent: 21px;
-// $desktop-indent: 35px;
-
-// Цвета
-$main: #fe7865; // rgb(254, 120, 101);
-$focus: #f17d4b; // rgb(241, 125, 75);
-$gray--dark: #141517; // rgb(20, 21, 23);
-$gray: #d7d9df; // rgb(215, 217, 223);
-$gray--light: #2c2e3f; // rgb(44, 46, 63);
-$gray--lighter: #293642; // rgb(41, 54, 66);
-$modal-bg: #FBF8F8;
-$modal-text: #48494D;
+$main: #fe7865;
+$focus: #f17d4b;
+$gray--dark: #141517;
+$gray: #d7d9df;
+$gray--light: #2c2e3f;
+$gray--lighter: #293642;
+$modal-bg: #fbf8f8;
+$modal-text: #48494d;
 $black: #000000;
 $white: #ffffff;
-
-// $font-deafult-color: transparentize($gray--light, 0.3);
-// $font-title-color: $gray--dark;

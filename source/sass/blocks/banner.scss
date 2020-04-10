@@ -11,10 +11,14 @@
   letter-spacing: -0.466667px;
 
   background-color: $gray--light;
-  background-image: url("img/bg-banner.jpg");
+  background-image: url("../img/bg-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-banner-2x.jpg");
+  }
 }
 
 .banner__wrapper {
@@ -44,7 +48,7 @@
 
   text-align: left;
 
-  background-image: url("img/icon-arrow.svg");
+  background-image: url("../img/icon-arrow.svg");
   background-repeat: no-repeat;
   background-size: 14px auto;
   background-position: right 40px center;
