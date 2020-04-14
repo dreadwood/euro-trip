@@ -9,10 +9,15 @@
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
 
   <header class="page-header page-header--no-js">
-    <a class="page-header__logo">
-      <img class="page-header__logo-img" src="img/logo.svg" width="58" height="22" alt="Логотип компании «Way»">
+    <a class="page-header__logo" aria-label="Логотип компании «Way»">
+      <svg class="page-header__logo-img" width="58" height="22">
+        <use xlink:href="#sprite-logo"></use>
+      </svg>
     </a>
     <button class="page-header__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
@@ -23,7 +28,11 @@
         <li><a class="nav__item" href="#price">Цены</a></li>
       </ul>
     </nav>
-    <a class="page-header__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
+    <a class="page-header__tel" href="tel:+749978468446">
+      <svg class="page-header__tel-icon" width="17" height="24">
+        <use xlink:href="#sprite-icon-phone"></use>
+      </svg>
+      +7 (499) -784-684-46</a>
   </header>
 
   <main class="page-main">
@@ -32,7 +41,12 @@
       <div class="banner__wrapper">
         <h2 class="banner__title">Путешествие по Европе</h2>
         <p class="banner__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-        <a class="banner__button button" href="#tour-list">смотреть тур</a>
+        <a class="banner__button button" href="#tour-list">
+          смотреть тур
+          <svg class="banner__button-icon" width="16" height="16">
+            <use xlink:href="#sprite-icon-arrow"></use>
+          </svg>
+        </a>
       </div>
     </section>
 
@@ -261,7 +275,11 @@
           потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
         <p class="price__tel">
           <span class="price__tel-message">Свяжитесь с нами</span>
-          <a class="price__tel-number" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          <a class="price__tel-number" href="tel:+749978468446">
+            <svg class="price__tel-icon" width="17" height="24">
+              <use xlink:href="#sprite-icon-phone"></use>
+            </svg>
+            +7 (499) -784-684-46</a>
         </p>
       </div>
     </section>
@@ -312,9 +330,18 @@
     <div class="page-footer__contact">
       <p class="page-footer__title">Наши контакты</p>
       <a class="page-footer__contact-item page-footer__contact-item--mail"
-        href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-      <a class="page-footer__contact-item page-footer__contact-item--tel" href="tel:+749978468446">+7 (499)
-        -784-684-46</a>
+        href="mailto:puteshestviemechta@gmail.ru">
+        <svg class="page-footer__contact-icon page-footer__contact-icon--mail" width="26" height="20">
+          <use xlink:href="#sprite-icon-mail"></use>
+        </svg>
+        puteshestviemechta@gmail.ru
+      </a>
+      <a class="page-footer__contact-item page-footer__contact-item--tel" href="tel:+749978468446">
+        <svg class="page-footer__contact-icon page-footer__contact-icon--tel" width="17" height="24">
+          <use xlink:href="#sprite-icon-phone"></use>
+        </svg>
+        +7 (499) -784-684-46
+      </a>
     </div>
     <div class="page-footer__block-message">
       <p class="page-footer__title">Корпоративные путешествия</p>

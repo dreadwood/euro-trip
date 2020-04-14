@@ -43,15 +43,21 @@
 }
 
 .banner__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 340px;
-  padding-right: 74px;
+  padding: 30px 39px 29px 40px;
 
   text-align: left;
+}
 
-  background-image: url("../img/icon-arrow.svg");
-  background-repeat: no-repeat;
-  background-size: 14px auto;
-  background-position: right 40px center;
+.banner__button-icon {
+  flex-shrink: 0;
+  align-self: center;
+
+  fill: none;
+  stroke: $white;
 }
 
 @media (max-width: $tablet-width-only) {
@@ -84,6 +90,12 @@
   .banner__button {
     width: 250px;
     margin: 0 auto;
+    padding: 19px 40px 17px 40px;
+  }
+
+  .banner__button-icon {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -103,6 +115,7 @@
   .banner__title {
     min-height: 72px;
     margin-bottom: 101px;
+    margin-left: 6px;
 
     font-size: 24px;
     line-height: 36px;

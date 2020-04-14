@@ -38,37 +38,31 @@
 }
 
 .page-header__tel {
-  position: relative;
-
+  display: flex;
+  align-items: center;
   margin-right: 14px;
-  margin-left: 94px;
+  margin-left: 60px;
 
   color: $main;
   text-decoration: underline;
 
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 1px;
-    left: -40px;
-
-    width: 30px;
-    height: 30px;
-
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-size: 30px auto;
-  }
+  stroke: $main;
 
   &:hover,
   &focus {
-    text-decoration: none;
+    color: $gray--dark;
+    stroke: $gray--dark;
   }
 
   &:active {
     opacity: 0.7;
   }
+}
+
+.page-header__tel-icon {
+  margin-right: 16px;
+
+  fill: none;
 }
 
 @media (max-width: $tablet-width-only) {

@@ -13,6 +13,9 @@ const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const minify = require('gulp-minify');
+const svgstore = require('gulp-svgstore');
+const posthtml = require('gulp-posthtml');
+const include = require('posthtml-include');
 
 gulp.task('clean', function () {
   return del('build');
@@ -21,7 +24,6 @@ gulp.task('clean', function () {
 gulp.task('copy', function () {
   return gulp.src([
       'source/fonts/**/*.{woff,woff2}',
-      'source/*.html'
     ], {
       base: 'source'
     })
@@ -30,6 +32,9 @@ gulp.task('copy', function () {
 
 gulp.task('html', () => {
   return gulp.src('source/*.html')
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(gulp.dest('build'));
 });
 
@@ -46,7 +51,7 @@ gulp.task('css', () => {
     .pipe(rename('style.min.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/css'))
-    .pipe(server.stream()); // узнать подробнее о методе
+    .pipe(server.stream());
 });
 
 gulp.task('images', function () {
@@ -62,6 +67,13 @@ gulp.task('images', function () {
 gulp.task('webp', function () {
   return gulp.src('build/img/**/*.{png,jpg}')
     .pipe(webp({quality: 90}))
+    .pipe(gulp.dest('build/img'));
+});
+
+gulp.task('sprite', function () {
+  return gulp.src('build/img/sprite-*.svg')
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
 });
 
@@ -99,6 +111,8 @@ gulp.task('build', gulp.series(
   'css',
   'images',
   'webp',
+  'sprite',
+  'html',
   'js'
 ));
 
