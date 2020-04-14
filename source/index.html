@@ -271,9 +271,9 @@
         <h2 class="visually-hidden">Обратная связь</h2>
         <b class="callback__title">У Вас остались вопросы?</b>
         <p class="callback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-        <form class="callback__form" action="https://echo.htmlacademy.ru" method="POST">
+        <form class="callback__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
           <div class="callback__form-wrapper">
-            <input class="callback__input callback__input-tel" type="tel" name="tel" autocomplete="tel" minlength="10"
+            <input class="callback__input callback__input-tel" type="tel" name="tel" pattern="[0-9]*" minlength="10"
               required placeholder="Введите 10 цифр номера">
             <input class="callback__input" type="email" name="email" autocomplete="email" autocapitalize="off"
               placeholder="E-mail">
@@ -326,10 +326,10 @@
     <div class="modal__card">
       <div class="modal__wrapper">
         <h2 class="modal__title">Купить тур </h2>
-        <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
-          <input class="modal__input modal__input--tel" type="tel" name="tel" autocomplete="tel" minlength="10" required
+        <form class="modal__form" action="https://echo.htmlacademy.ru" autocomplete="off" method="POST">
+          <input class="modal__input modal__input--tel" type="tel" name="tel" minlength="10" pattern="[0-9]*" required
             placeholder="Введите 10 цифр номера">
-          <input class="modal__input modal__input--email" type="email" name="email" autocomplete="email"
+          <input class="modal__input modal__input--email" type="email" name="email"
             autocapitalize="off" placeholder="E-mail">
           <button class="modal__button button" type="submit">Отправить</button>
         </form>
