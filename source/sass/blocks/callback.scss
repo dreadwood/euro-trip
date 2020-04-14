@@ -71,11 +71,6 @@
 
   border: 1px solid transparentize($gray--light, 0.7);
 
-  &::placeholder {
-    font-family: $font-deafult;
-    color: $gray--dark;
-  }
-
   &:nth-child(2n) {
     margin-right: 0;
   }
@@ -89,8 +84,18 @@
     background-size: auto 29px;
   }
 
+  &::placeholder {
+    font-family: $font-deafult;
+    color: $gray--dark;
+  }
+
   &:invalid {
     border: 1px solid $main;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $gray--light;
   }
 }
 

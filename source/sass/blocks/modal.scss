@@ -84,6 +84,15 @@
 
   border: 1px solid $gray;
 
+  &--tel {
+    padding: 15px 15px 15px 50px;
+
+    background-image: url("../img/input-ph.svg");
+    background-repeat: no-repeat;
+    background-position: 14px 5px;
+    background-size: auto 29px;
+  }
+
   &::placeholder {
     font-family: $font-deafult;
     color: $gray--dark;
@@ -93,13 +102,9 @@
     border: 1px solid $main;
   }
 
-  &--tel {
-    padding: 15px 15px 15px 50px;
-
-    background-image: url("../img/input-ph.svg");
-    background-repeat: no-repeat;
-    background-position: 14px 5px;
-    background-size: auto 29px;
+  &:hover,
+  &:focus {
+    border: 1px solid $gray--light;
   }
 }
 
