@@ -285,8 +285,10 @@
         <p class="callback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
         <form class="callback__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
           <div class="callback__form-wrapper">
-            <input class="callback__input callback__input-tel" type="tel" name="tel" pattern="[0-9]*" minlength="10" required placeholder="Введите 10 цифр номера">
-            <input class="callback__input" type="email" name="email" autocomplete="email" autocapitalize="off" placeholder="E-mail">
+            <label class="visually-hidden" for="callback-tel">Телефон</label>
+            <input class="callback__input callback__input-tel" id="callback-tel" type="tel" name="tel" pattern="[0-9]*" minlength="10" required placeholder="Введите 10 цифр номера">
+            <label class="visually-hidden" for="callback-emeil">email</label>
+            <input class="callback__input" id="callback-emeil" type="email" name="email" autocomplete="email" autocapitalize="off" placeholder="E-mail">
           </div>
           <button class="callback__button button" type="submit">Отправить</button>
         </form>

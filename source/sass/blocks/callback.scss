@@ -55,12 +55,12 @@
 .callback__form-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 }
 
 .callback__input {
   width: 269px;
-  margin-right: 19px;
   margin-bottom: 25px;
   padding: 16px 15px 15px 14px;
 
@@ -70,10 +70,6 @@
   color: $gray--dark;
 
   border: 1px solid transparentize($gray--light, 0.7);
-
-  &:nth-child(2n) {
-    margin-right: 0;
-  }
 
   &-tel {
     padding: 16px 15px 15px 50px;
@@ -160,7 +156,6 @@
 
   .callback__input {
     width: 100%;
-    margin-right: 0;
   }
 
   .callback__button {
