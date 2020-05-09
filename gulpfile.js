@@ -12,7 +12,6 @@ const del = require('del');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
-const minify = require('gulp-minify');
 const svgstore = require('gulp-svgstore');
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
@@ -24,6 +23,7 @@ gulp.task('clean', function () {
 gulp.task('copy', function () {
   return gulp.src([
       'source/fonts/**/*.{woff,woff2}',
+      'source/js/**/*.js',
     ], {
       base: 'source'
     })
@@ -77,16 +77,6 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('js', function () {
-  return gulp.src('source/js/*.js')
-    .pipe(minify({
-      ext: {
-          src:'.js',
-          min:'.min.js'
-      }}))
-    .pipe(gulp.dest('build/js'))
-});
-
 gulp.task('server', () => {
   server.init({
     server: 'build',
@@ -113,7 +103,6 @@ gulp.task('build', gulp.series(
   'webp',
   'sprite',
   'html',
-  'js'
 ));
 
 gulp.task('start', gulp.series('build', 'server'));
