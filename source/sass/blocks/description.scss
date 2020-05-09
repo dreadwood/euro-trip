@@ -1,5 +1,22 @@
 .description {
+  position: relative;
+
   background-color: transparent;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 157px;
+    left: -137px;
+    z-index: -1;
+
+    width: 1444px;
+    height: 1089px;
+
+    background-image: url("../img/bg-map.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .description__list-link {
@@ -7,6 +24,12 @@
 }
 
 @media (max-width: $tablet-width-only) {
+  .description {
+    &::before {
+      display: none;
+    }
+  }
+
   .description__list-link {
     margin-bottom: 32px;
     margin-left: 37px;
