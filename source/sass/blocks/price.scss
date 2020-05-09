@@ -342,7 +342,7 @@
   }
 
   .price__item-list {
-    margin: 0 20px;
+    margin: 0 20px 10px 20px;
     padding: 21px 0 0 30px;
 
     border-top: 1px solid transparentize($gray--light, 0.3);
@@ -394,9 +394,5 @@
 
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-
-    .price__item-button {
-      margin: 19px -1px -1px -1px;
-    }
   }
 }
