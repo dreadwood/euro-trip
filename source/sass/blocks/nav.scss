@@ -13,7 +13,6 @@
 
   display: flex;
   flex-wrap: wrap;
-  max-width: 700px;
 }
 
 .nav__item {
@@ -39,7 +38,7 @@
       right: 0;
       z-index: 5;
 
-      width: 320px;
+      width: 100vw;
       height: 100vh;
       padding-top: 137px;
 

@@ -1,14 +1,19 @@
 "use string"
 
+const toggleBlockScroll = () => {
+  document.body.classList.toggle('scroll-hidden');
+};
+
+
 const header = document.querySelector('.page-header');
 const button = document.querySelector('.page-header__toggle');
 const nav = document.querySelector('.nav');
 const navButtons = document.querySelectorAll('.nav__item');
 
-const toogleMenu = (evt) => {
-  evt.preventDefault();
+const toogleMenu = () => {
   header.classList.toggle('page-header--open');
   header.classList.toggle('page-header--close');
+  toggleBlockScroll();
 };
 
 header.classList.remove('page-header--no-js');
@@ -19,9 +24,9 @@ nav.classList.add('nav--js');
 button.addEventListener('click', toogleMenu);
 
 navButtons.forEach((button) => {
-  button.addEventListener('click', (evt) => {
+  button.addEventListener('click', () => {
     if (header.classList.contains('page-header--open')) {
-      toogleMenu(evt);
+      toogleMenu();
     }
   });
 });
@@ -76,6 +81,7 @@ const modalSuccess = modal.querySelector('.modal__success');
 const closeModal = () => {
   modal.classList.remove('modal--show');
   modalSuccess.classList.remove('modal__success--show');
+  toggleBlockScroll();
 };
 
 const isEscHandler = (evt) => {
@@ -92,6 +98,7 @@ buttonsBuy.forEach((button) => {
     evt.preventDefault();
     modal.classList.add('modal--show');
     modalInputTel.focus();
+    toggleBlockScroll();
 
     document.addEventListener('keydown', isEscHandler);
   });
@@ -120,6 +127,7 @@ callbackForm.addEventListener('submit', (evt) => {
   modal.classList.add('modal--show');
   modalSuccess.classList.add('modal__success--show');
   callbackForm.reset();
+  toggleBlockScroll();
 
   document.addEventListener('keydown', isEscHandler);
 });
