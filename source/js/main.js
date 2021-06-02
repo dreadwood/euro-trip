@@ -1,15 +1,15 @@
 "use string";
 
 (function () {
-  const toggleBlockScroll = () => {
-    document.body.classList.toggle('scroll-hidden');
-  };
-
-
+  // хедер и меню
   const header = document.querySelector('.page-header');
   const button = document.querySelector('.page-header__toggle');
   const nav = document.querySelector('.nav');
   const navButtons = document.querySelectorAll('.nav__item');
+
+  const toggleBlockScroll = () => {
+    document.body.classList.toggle('scroll-hidden');
+  };
 
   const toogleMenu = () => {
     header.classList.toggle('page-header--open');
@@ -33,6 +33,7 @@
   });
 
 
+  // переключение карточек туров
   const tourLinks = document.querySelectorAll('.tour-list__link');
   const tourCards = document.querySelectorAll('.tour-card');
   const tourIcons = document.querySelectorAll('.tour')
@@ -69,8 +70,7 @@
   });
 
 
-
-
+  // модальное окно
   const callbackForm = document.querySelector('.callback__form')
   const buttonsBuy = document.querySelectorAll('.button--buy-now');
   const modal = document.querySelector('.modal');
@@ -134,6 +134,7 @@
   });
 
 
+  // валидация номеров телефона
   const modalTel = document.querySelector('.modal__input--tel');
   const callbackTel = document.querySelector('.callback__input-tel');
 
