@@ -52,11 +52,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: -50px -30px;
+  margin: -40px -30px;
 }
 
 .places__item {
-  margin: 50px 30px;
+  margin: 40px 20px;
 }
 
 @include tablet {
