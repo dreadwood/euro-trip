@@ -20,3 +20,15 @@
     width: $desktop-width;
   }
 }
+
+@mixin transition($args...) {
+  transition-timing-function: ease-out;
+  transition-duration: 0.3s;
+  transition-property: $args;
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
