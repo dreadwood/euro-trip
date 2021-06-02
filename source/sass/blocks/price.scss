@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 138px 0;
+  padding: 0 30px 138px 30px;
 
   font-family: $font-deafult;
   font-size: 16px;
@@ -24,6 +24,8 @@
 }
 
 .price__item {
+  @include transition(box-shadow);
+
   display: flex;
   flex-direction: column;
   width: 370px;
@@ -46,13 +48,7 @@
 
   &:hover .price__item-text::after,
   &:focus .price__item-text::after {
-    background-color: $main;
-    opacity: 0.5;
-  }
-
-  &:hover .price__item-advantage::before,
-  &:focus .price__item-advantage::before {
-    background-image: url("../img/icon-checkmark-black.svg");
+    background-color: transparentize($main, 0.5);
   }
 
   &--top {
@@ -78,6 +74,8 @@
 }
 
 .price__item-title {
+  @include transition(color);
+
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -110,6 +108,8 @@
   line-height: 24px;
 
   &::after {
+    @include transition(background-color);
+
     content: "";
 
     position: absolute;
@@ -211,6 +211,8 @@
 }
 
 .price__tel-number {
+  @include transition(color);
+
   display: flex;
   justify-content: space-between;
   font-size: 20px;
@@ -236,7 +238,7 @@
   fill: none;
 }
 
-@media (max-width: $tablet-width-only) {
+@include tablet {
   .price {
     flex-direction: column;
     padding: 0 0 106px 0;
@@ -356,10 +358,15 @@
   .price__item-button {
     margin: auto -1px -1px -1px;
     padding: 20px 40px 18px 40px;
+
+    &:hover,
+    &:focus {
+      transform: none;
+    }
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@include mobile {
   .price {
     width: auto;
     padding: 0;
@@ -384,13 +391,14 @@
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: -15px -10px;
     padding: 0 16px 20px 16px;
   }
 
   .price__item {
     width: 288px;
     min-height: 614px;
-    margin-bottom: 30px;
+    margin: 15px 10px;
     padding: 28px 0 0 0;
 
     border-bottom-left-radius: 0;

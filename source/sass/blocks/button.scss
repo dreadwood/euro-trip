@@ -1,6 +1,8 @@
 .button {
+  @include transition(background-color, transform);
+
   display: block;
-  padding: 30px 40px;
+  padding: 28px 40px 32px 40px;
 
   font-family: $font-deafult;
   font-size: 12px;
@@ -19,6 +21,7 @@
   &:hover,
   &:focus {
     background-color: $focus;
+    transform: translateY(3px);
   }
 
   &:active {
@@ -26,12 +29,11 @@
   }
 }
 
-@media (max-width: $tablet-width-only) {
+@include tablet {
   .button {
-    padding: 19px 40px;
+    padding: 16px 40px 19px 40px;
 
     font-size: 10px;
-    line-height: 12px;
     font-weight: 500;
     letter-spacing: 2px;
   }

@@ -3,7 +3,7 @@
 
   display: flex;
   align-items: center;
-  padding: 37px 0 31px 0;
+  padding: 37px 30px 31px 30px;
 
   font-family: $font-deafult;
   font-size: 18px;
@@ -14,6 +14,8 @@
 }
 
 .page-header__logo {
+  @include transition(opacity);
+
   display: flex;
   align-items: center;
   margin-top: -6px;
@@ -33,11 +35,12 @@
 }
 
 .page-header__nav {
-  margin-top: -3px;
   margin-left: auto;
 }
 
 .page-header__tel {
+  @include transition(color, stroke);
+
   display: flex;
   align-items: center;
   margin-right: 14px;
@@ -49,7 +52,7 @@
   stroke: $main;
 
   &:hover,
-  &focus {
+  &:focus {
     color: $gray--dark;
     stroke: $gray--dark;
   }
@@ -65,7 +68,7 @@
   fill: none;
 }
 
-@media (max-width: $tablet-width-only) {
+@include tablet {
   .page-header {
     padding: 18px 21px 15px 21px;
 
@@ -94,6 +97,8 @@
   }
 
   .page-header__toggle {
+    @include transition(filter);
+
     display: block;
     position: absolute;
     top: 0;
@@ -108,9 +113,14 @@
     background-color: $main;
     background-image: url("../img/icon-menu.svg");
     background-repeat: no-repeat;
-    background-position: 21px 10px;
+    background-position: center;
     border: none;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      filter: brightness(0.9);
+    }
   }
 
   .page-header__tel {
@@ -118,7 +128,7 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@include mobile {
   .page-header {
     width: auto;
     padding: 18px 50px 15px 16px;

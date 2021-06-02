@@ -1,5 +1,5 @@
 .banner {
-  min-height: 860px;
+  position: relative;
 
   font-family: $font-deafult;
   font-size: 16px;
@@ -10,20 +10,32 @@
   color: $white;
   letter-spacing: -0.466667px;
 
-  background-color: $gray--light;
-  background-image: url("../img/bg-banner.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-banner-2x.jpg");
+.banner__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $gray--light;
+  object-fit: cover;
+
+  @include mobile {
+    height: 236px;
   }
 }
 
 .banner__wrapper {
   @include wrapper;
 
+  position: relative;
+  z-index: 1;
+
+  min-height: 860px;
   padding: 185px 80px 30px 700px;
 }
 
@@ -55,20 +67,23 @@
 .banner__button-icon {
   flex-shrink: 0;
   align-self: center;
+  margin-left: 14px;
+  margin-bottom: -3px;
 
   fill: none;
   stroke: $white;
 }
 
-@media (max-width: $tablet-width-only) {
+@include tablet {
   .banner {
-    min-height: 344px;
+
     padding: 60px 185px 30px 185px;
   }
 
   .banner__wrapper {
     display: flex;
     flex-direction: column;
+    min-height: 344px;
     padding: 0;
   }
 
@@ -96,16 +111,13 @@
   .banner__button-icon {
     width: 14px;
     height: 14px;
+    margin-bottom: -2px;
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@include mobile {
   .banner {
     padding: 82px 16px 30px 16px;
-
-    background-color: transparent;
-    background-size: auto 235px;
-    background-position: center 0;
   }
 
   .banner__wrapper {

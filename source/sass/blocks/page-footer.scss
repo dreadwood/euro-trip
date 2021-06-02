@@ -2,9 +2,8 @@
   @include wrapper;
 
   display: flex;
-  flex-wrap: wrap;
   flex-grow: 0;
-  padding-bottom: 74px;
+  padding: 0 30px 74px 30px;
 
   font-family: $font-deafult;
   font-size: 14px;
@@ -67,7 +66,7 @@
   color: transparentize($gray--dark, 0.5);
 
   &:hover,
-  &foter {
+  &:focus {
     text-decoration: underline;
   }
 
@@ -77,6 +76,8 @@
 }
 
 .page-footer__contact-item {
+  @include transition(color);
+
   display: flex;
   margin-bottom: 17px;
 
@@ -124,15 +125,21 @@
   margin: 0;
 }
 
-@media (max-width: $tablet-width-only) {
+@include tablet {
   .page-footer {
+    flex-wrap: wrap;
     padding: 0 22px 50px 22px;
   }
 
   .page-footer__other-tour {
-    width: 395px;
+    width: 50%;
+    justify-content: center;
     margin-bottom: 18px;
     padding: 0 20px 0 0;
+  }
+
+  .page-footer__title {
+    text-align: center;
   }
 
   .page-footer__list {
@@ -141,8 +148,13 @@
   }
 
   .page-footer__contact {
-    margin-right: 0;
+    width: 50%;
+    margin-right: auto;
     padding: 0 22px 0 20px;
+  }
+
+  .page-footer__contact-item {
+    justify-content: center;
   }
 
   .page-footer__block-message {
@@ -156,16 +168,16 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@include mobile {
   .page-footer {
     padding: 0 12px 39px 12px;
   }
 
   .page-footer__other-tour {
     justify-content: center;
-    width: auto;
+    width: 100%;
     margin-bottom: 0;
-    padding: 0 9px 0 0;
+    padding: 0;
 
     border: none;
     border-bottom: 1px solid $gray;
@@ -184,13 +196,10 @@
   }
 
   .page-footer__contact {
-    margin-left: 0;
     padding: 29px 22px 0 20px;
   }
 
   .page-footer__contact-item {
-    justify-content: center;
-
     &--mail {
       font-size: 14px;
       line-height: 17px;

@@ -148,17 +148,17 @@
   cursor: pointer;
 }
 
-@media (max-width: $mobile-width-only) {
+@include mobile {
   .modal__card {
     width: 320px;
-    min-height: 568px;
+    min-height: 460px;
 
     background-image: none;
   }
 
   .modal__wrapper {
     width: 100%;
-    padding: 100px 16px 20px 16px;
+    padding: 50px 16px 20px 16px;
   }
 
   .modal__form {

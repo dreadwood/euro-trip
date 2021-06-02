@@ -6,18 +6,20 @@
 }
 
 @mixin wrapper {
+  width: 100%;
+  max-width: $desktop-width;
   margin: 0 auto;
+}
 
-  @media (min-width: $mobile-width) {
-    width: $mobile-width;
+@mixin tablet {
+  @media (max-width: $desktop-width - 1px) {
+    @content;
   }
+}
 
-  @media (min-width: $tablet-width) {
-    width: auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: $desktop-width;
+@mixin mobile {
+  @media (max-width: $tablet-width - 1px) {
+    @content;
   }
 }
 

@@ -1,5 +1,7 @@
 .places {
-  padding-bottom: 82px;
+  @include wrapper;
+
+  padding: 0 30px 82px 30px;
 
   font-family: $font-deafult;
   font-size: 16px;
@@ -50,27 +52,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: -50px -30px;
 }
 
 .places__item {
-  &:nth-child(3n+1) {
-    margin-right: 60px;
-  }
-
-  &:nth-child(3n+3) {
-    margin-left: 60px;
-  }
-
-  &:last-child {
-    margin-left: 60px;
-  }
-
-  &:nth-last-child(n+4) {
-    margin-bottom: 101px;
-  }
+  margin: 50px 30px;
 }
 
-@media (max-width: $tablet-width-only) {
+@include tablet {
   .places {
     padding: 0 20px 63px 20px;
   }
@@ -97,36 +86,17 @@
     text-align: center;
   }
 
+  .places__list {
+    margin: -20px -15px;
+  }
+
   .places__item {
     width: 39.5%;
-    margin-bottom: 20px;
-
-    &:nth-child(2n) {
-      margin-right: 0;
-      margin-left: 0;
-    }
-
-    &:nth-child(2n+1) {
-      margin-right: 30px;
-      margin-left: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
-      margin-left: 0;
-    }
-
-    &:nth-last-child(n+4) {
-      margin-bottom: 20px;
-    }
-
-    &:nth-last-child(3) {
-      margin-bottom: 30px;
-    }
+    margin: 20px 15px;
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@include mobile {
   .places {
     padding: 0 16px 43px 16px;
   }
@@ -144,26 +114,11 @@
   }
 
   .places__list {
-    justify-content: space-evenly;
+    margin: -20px -15px;
   }
 
   .places__item {
     width: 288px;
-
-    &:nth-child(2n+1) {
-      margin-right: 0;
-    }
-
-    &:nth-last-child(n+4) {
-      margin-bottom: 0;
-    }
-
-    &:nth-last-child(3) {
-      margin-bottom: 0;
-    }
-
-    &:nth-last-child(n) {
-      margin-bottom: 30px;
-    }
+    margin: 20px 15px;
   }
 }

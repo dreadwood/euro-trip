@@ -17,7 +17,7 @@
   &--greece .tour-card__feedback {
     background-image: url("../img/greece-bg.jpg");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @include retina {
       background-image: url("../img/greece-bg-2x.jpg");
     }
   }
@@ -25,7 +25,7 @@
   &--albania .tour-card__feedback {
     background-image: url("../img/albania-bg.jpg");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @include retina {
       background-image: url("../img/albania-bg-2x.jpg");
     }
   }
@@ -33,7 +33,7 @@
   &--macedonia .tour-card__feedback {
     background-image: url("../img/macedonia-bg.jpg");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @include retina {
       background-image: url("../img/macedonia-bg-2x.jpg");
     }
   }
@@ -41,7 +41,7 @@
   &--montenegro .tour-card__feedback {
     background-image: url("../img/montenegro-bg.jpg");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @include retina {
       background-image: url("../img/montenegro-bg-2x.jpg");
     }
   }
@@ -49,7 +49,7 @@
   &--croatia .tour-card__feedback {
     background-image: url("../img/croatia-bg.jpg");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @include retina {
       background-image: url("../img/croatia-bg-2x.jpg");
     }
   }
@@ -115,14 +115,14 @@
   background-size: auto 100%;
 }
 
-@media (max-width: $tablet-width-only) {
+@include tablet {
   .tour-card {
     flex-direction: column;
 
     &--greece .tour-card__feedback {
       background-image: url("../img/greece-bg-tablet.jpg");
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @include retina {
         background-image: url("../img/greece-bg-tablet-2x.jpg");
       }
     }
@@ -130,7 +130,7 @@
     &--albania .tour-card__feedback {
       background-image: url("../img/albania-bg-tablet.jpg");
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @include retina {
         background-image: url("../img/albania-bg-tablet-2x.jpg");
       }
     }
@@ -138,7 +138,7 @@
     &--macedonia .tour-card__feedback {
       background-image: url("../img/macedonia-bg-tablet.jpg");
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @include retina {
         background-image: url("../img/macedonia-bg-tablet-2x.jpg");
       }
     }
@@ -146,7 +146,7 @@
     &--montenegro .tour-card__feedback {
       background-image: url("../img/montenegro-bg-tablet.jpg");
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @include retina {
         background-image: url("../img/montenegro-bg-tablet-2x.jpg");
       }
     }
@@ -154,7 +154,7 @@
     &--croatia .tour-card__feedback {
       background-image: url("../img/croatia-bg-tablet-2x.jpg");
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @include retina {
         background-image: url("../img/croatia-bg-tablet-2x.jpg");
       }
     }
@@ -200,7 +200,7 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@include mobile {
   .tour-card__wrapper {
     margin-bottom: 40px;
     padding: 0 16px 10px 16px;

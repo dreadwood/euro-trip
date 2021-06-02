@@ -1,8 +1,9 @@
 .callback {
   @include wrapper;
+
   display: flex;
   justify-content: flex-end;
-  padding: 70px 0;
+  padding: 70px 30px;
 
   font-family: $font-deafult;
   font-size: 16px;
@@ -23,7 +24,8 @@
 }
 
 .callback__container {
-  width: 656px;
+  width: 100%;
+  max-width: 656px;
   margin-right: -12px;
   padding: 50px 49px 49px 50px;
 
@@ -60,6 +62,8 @@
 }
 
 .callback__input {
+  @include transition(border);
+
   width: 269px;
   margin-bottom: 25px;
   padding: 16px 15px 15px 14px;
@@ -100,7 +104,7 @@
   padding: 18px 10px 17px 10px;
 }
 
-@media (max-width: $tablet-width-only) {
+@include tablet {
   .callback {
     justify-content: center;
     padding: 70px 0 75px 0;
@@ -123,16 +127,18 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@include mobile {
   .callback {
-    padding: 0;
+    padding: 40px 0 0 0;
 
     background-image: none;
   }
 
   .callback__container {
-    width: auto;
-    padding: 51px 16px 50px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 16px;
 
     background-color: $modal-bg;
     box-shadow: none;
@@ -151,7 +157,15 @@
   }
 
   .callback__text {
+    max-width: 400px;
     margin-bottom: 19px;
+  }
+
+  .callback__form {
+    width: 100%;
+    max-width: 288px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .callback__input {
@@ -159,6 +173,6 @@
   }
 
   .callback__button {
-    width: 288px;
+    width: 100%;
   }
 }
