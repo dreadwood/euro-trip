@@ -1,24 +1,14 @@
 {
   "name": "euro-trip",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Лендинг выполняемый в рамках Грейдировнаия HTML Academy Euro trip",
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "build": "gulp build",
     "test": "npm run editorconfig && npm run stylelint",
     "start": "gulp start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dreadwood/euro-trip.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dreadwood/euro-trip/issues"
   },
   "homepage": "https://github.com/dreadwood/euro-trip#readme",
   "devDependencies": {
@@ -34,7 +24,7 @@
     "gulp-postcss": "8.0.0",
     "gulp-posthtml": "3.0.4",
     "gulp-rename": "2.0.0",
-    "gulp-sass": "4.0.2",
+    "gulp-sass": "4.1.0",
     "gulp-sourcemaps": "2.6.5",
     "gulp-svgstore": "7.0.1",
     "gulp-uglify": "3.0.2",
@@ -50,6 +40,5 @@
     "source/js/**/*.js",
     "source/img/**/*.svg",
     "source/sass/**/*.scss"
-  ],
-  "dependencies": {}
+  ]
 }
