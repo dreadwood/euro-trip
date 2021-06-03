@@ -8,6 +8,7 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "build": "gulp build",
     "test": "npm run editorconfig && npm run stylelint",
+    "gh-pages": "push-dir --dir=build --branch=gh-pages",
     "start": "gulp start"
   },
   "homepage": "https://github.com/dreadwood/euro-trip#readme",
@@ -30,6 +31,7 @@
     "gulp-uglify-es": "2.0.0",
     "gulp-webp": "4.0.1",
     "posthtml-include": "1.4.3",
+    "push-dir": "0.4.1",
     "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "0.1.4"
   },
