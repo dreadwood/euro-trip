@@ -1,6 +1,6 @@
 "use string";
 
-(function () {
+(() => {
   // хедер и меню
   const header = document.querySelector('.page-header');
   const button = document.querySelector('.page-header__toggle');

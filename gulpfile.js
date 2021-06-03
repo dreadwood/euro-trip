@@ -15,18 +15,15 @@ const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
+const uglify = require('gulp-uglify-es').default;
 
 gulp.task('clean', function () {
   return del('build');
 });
 
 gulp.task('copy', function () {
-  return gulp.src([
-      'source/fonts/**/*.{woff,woff2}',
-      'source/js/**/*.js',
-    ], {
-      base: 'source'
-    })
+  return gulp.src('source/fonts/**/*.{woff,woff2}',
+    {base: 'source'})
     .pipe(gulp.dest('build'));
 });
 
@@ -52,6 +49,14 @@ gulp.task('css', () => {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/css'))
     .pipe(server.stream());
+});
+
+gulp.task('js', () => {
+  return gulp.src('source/js/**/*.js')
+    .pipe(gulp.dest('build/js'))
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('images', function () {
@@ -86,8 +91,9 @@ gulp.task('server', () => {
     ui: false
   })
 
-  gulp.watch('source/sass/**/*scss', gulp.series('css'))
-  gulp.watch('source/*html', gulp.series('html', 'refresh'));
+  gulp.watch('source/sass/**/*.scss', gulp.series('css'))
+  gulp.watch('source/js/**/*.js', gulp.series('js', 'refresh'));
+  gulp.watch('source/*.html', gulp.series('html', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {
@@ -99,6 +105,7 @@ gulp.task('build', gulp.series(
   'clean',
   'copy',
   'css',
+  'js',
   'images',
   'webp',
   'sprite',

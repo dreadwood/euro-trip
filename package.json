@@ -2,7 +2,7 @@
   "name": "euro-trip",
   "version": "1.0.0",
   "private": true,
-  "description": "Лендинг выполняемый в рамках Грейдировнаия HTML Academy Euro trip",
+  "description": "Лендинг Euro-trip (грейдировнаия HTML Academy)",
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/dreadwood/euro-trip#readme",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "9.7.6",
     "browser-sync": "2.26.7",
     "del": "5.1.0",
@@ -27,17 +27,17 @@
     "gulp-sass": "4.1.0",
     "gulp-sourcemaps": "2.6.5",
     "gulp-svgstore": "7.0.1",
-    "gulp-uglify": "3.0.2",
+    "gulp-uglify-es": "2.0.0",
     "gulp-webp": "4.0.1",
     "posthtml-include": "1.4.3",
-    "stylelint": "13.3.0",
+    "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "0.1.4"
   },
   "editorconfig-cli": [
     "*.json",
     "*.js",
     "source/*.html",
-    "source/js/**/*.js",
+    "source/js/main.js",
     "source/img/**/*.svg",
     "source/sass/**/*.scss"
   ]
